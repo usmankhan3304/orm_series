@@ -8,3 +8,6 @@ from .models import Restaurant
 @admin.register(Restaurant)
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = ['name', 'website', 'date_opened', 'latitude', 'longtitude']
+admin.site.register(Rating)
+admin.site.register(MyModel)
+admin.site.register(Sale)

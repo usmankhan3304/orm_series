@@ -21,6 +21,6 @@ from user import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('api/register/', views.UserRegistrationAPIView.as_view(), name='user-registration'),
+    path('api/register/', views.UserRegistrationAPIView.as_view({'post': 'create','get':'list'}), name='user-registration'),
 ]
 
