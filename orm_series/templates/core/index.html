@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Hello World, how are you all??</h1>
+        
+        <div class="row">
+          <div class="col-lg-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Website</th>
+                  <th>Date Opened</th>
+                  <th>Restaurant Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in data %}
+                <tr>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.website }}</td>
+                  <td>{{ item.date_opened }}</td>
+                  <td>{{ item.restuarant_type}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <div class="col-lg-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Restaurant</th>
+                  <th>User</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in rating %}
+                <tr>
+                  <td>{{ item.restaurant }}</td>
+                  <td>{{ item.user }}</td>
+                  <td>{{ item.rating }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Restaurant</th>
+                      <th>Income</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in sale %}
+                    <tr>
+                      <td>{{ item.restaurant }}</td>
+                      <td>{{ item.income }}</td>
+                    <td>{{ item.date_time }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+        </div>
+      </div>
+     
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

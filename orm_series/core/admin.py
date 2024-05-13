@@ -8,6 +8,13 @@ from .models import Restaurant
 @admin.register(Restaurant)
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = ['name', 'website', 'date_opened', 'latitude', 'longtitude']
-admin.site.register(Rating)
+@admin.register(Rating)
+class RatingAdmin(admin.ModelAdmin):
+    list_display=['id','restaurant','user','rating']
+    ordering=['id','user']
+    search_fields=['user__first_name','id']
+
+
+
 admin.site.register(MyModel)
 admin.site.register(Sale)

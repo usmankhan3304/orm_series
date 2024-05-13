@@ -1,14 +1,36 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse, redirect
 from django.contrib.auth import get_user_model
 from rest_framework import viewsets, status
 # Create your views here.
 # views.py
+from django.views import View
 User=get_user_model()
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserRegistrationSerializer
 User=get_user_model()
+
+
+# class LogininView(View):
+#     def get(self,request,*args, **kwargs):
+#         form=LoginForm()
+#         return render(request, 'user/login.html', {'form': form})
+#     def post(self, request, *args, **kwargs):
+#         form = LoginForm(request.POST)
+#         if form.is_valid():
+#             pass
+#         return render(request, 'user/login.html', {'form': form})
+
+
+# class LogoutView(View):
+#     next_page = '/login/'
+
+#     def post(self, request, *args, **kwargs):
+#         logout(request)
+#         return redirect('/login')
+
+
 
 class UserRegistrationAPIView(viewsets.ViewSet):
     
