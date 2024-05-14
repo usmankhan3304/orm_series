@@ -20,8 +20,9 @@ from user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("allauth.urls")),
+    # path("", include("allauth.urls")),
     path("",include('core.urls')),
+    path("form/", include('form.urls')),
    
     path('api/register/', views.UserRegistrationAPIView.as_view({'post': 'create','get':'list'}), name='user-registration'),
 ]

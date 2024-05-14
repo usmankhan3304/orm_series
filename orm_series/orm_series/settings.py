@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'user',
      'rest_framework',
      'django_extensions',
+     'crispy_forms',
+     "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/"
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -15,7 +15,7 @@ class RestaurantTemplate(LoginRequiredMixin,TemplateView):
         context['post']="hello"
         context['name']="Ali Khan Afridi"
         return context
-@login_required()
+
 def home(request):
     try:
         query=Restaurant.objects.all()
